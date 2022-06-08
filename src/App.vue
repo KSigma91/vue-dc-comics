@@ -3,6 +3,7 @@
     <myHeader/>
     <calltoAction/>
     <myMain/>
+    <myFooter/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import myHeader from './components/myHeader.vue'
 import calltoAction from './components/calltoAction.vue'
 import myMain from './components/myMain'
+import myFooter from './components/myFooter'
 
 export default {
   name: 'App',
   components: {
     myHeader,
     calltoAction,
-    myMain
+    myMain,
+    myFooter
   }
 }
 </script>
