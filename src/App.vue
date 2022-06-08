@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <myHeader/>
+    <calltoAction/>
+    <myMain/>
   </div>
 </template>
 
 <script>
 import myHeader from './components/myHeader.vue'
+import calltoAction from './components/calltoAction.vue'
+import myMain from './components/myMain'
 
 export default {
   name: 'App',
   components: {
-    myHeader
+    myHeader,
+    calltoAction,
+    myMain
   }
 }
 </script>
