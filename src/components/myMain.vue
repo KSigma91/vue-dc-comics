@@ -89,13 +89,13 @@
             justify-content: space-evenly;
             align-items: center;
             margin: 0 auto;
-            width: 80%;
+            // width: 80%;
 
             li {
                 display: flex;
                 justify-content: space-around;
                 list-style-type: none;
-                padding: 40px;
+                padding: 30px;
 
                 a {
                     display: flex;
@@ -107,6 +107,10 @@
                         max-width: 100%;
                         height: 55px; 
                         margin: 0 10px;
+                    }
+
+                    span {
+                        font-size: 13px;
                     }
                 }
             }

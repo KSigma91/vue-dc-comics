@@ -4,8 +4,8 @@
         <nav>
             <ul>
                 <li v-for="(link, i) in links" :key="i">
-                    <a :href="link.url">
-                        {{ link.text }}
+                    <a :href="link.url" :class="link.current ? 'click' : ''">
+                        {{ link.text }}                      
                     </a>
                 </li>
                 <!-- <li>
@@ -143,10 +143,17 @@
             li {
                 padding: 60px 20px;
 
+                
+
                 a {
                     text-decoration: none;
                     font-weight: 600;
                     color: #404a5c;
+
+                    &:hover {
+                        padding-bottom: 57px;
+                        border-bottom: 5px solid #1A75F2;
+                    }
                 }
             }
         }
