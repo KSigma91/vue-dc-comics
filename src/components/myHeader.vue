@@ -3,7 +3,12 @@
         <img src="../assets/dc-logo.png" alt="dc_logo_img">
         <nav>
             <ul>
-                <li>
+                <li v-for="(link, i) in links" :key="i">
+                    <a :href="link.url">
+                        {{ link.text }}
+                    </a>
+                </li>
+                <!-- <li>
                     <a href="#">
                         TEST
                     </a>
@@ -47,13 +52,7 @@
                     <a href="#">
                         TEST
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        TEST
-                    </a>
-                </li>
-
+                </li> -->
             </ul>
         </nav>
     </header>
@@ -62,6 +61,62 @@
 <script>
     export default {
         name : 'myHeader',
+        data() {
+            return {
+                links : [
+                    {
+                        text : "CHARACTERS",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "COMICS",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "MOVIES",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "TV",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "GAMES",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "COLLECTIBLES",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "VIDEOS",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "FANS",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "NEWS",
+                        url : "#",
+                        current : false
+                    },
+                    {
+                        text : "SHOP",
+                        url : "#",
+                        current : false
+                    },
+                ]
+            }
+        }
     }
 </script>
 
@@ -77,7 +132,7 @@
 
         img {
             max-width: 100%;
-            height: 100px;
+            height: 90px;
         }
 
         ul {
@@ -90,6 +145,7 @@
 
                 a {
                     text-decoration: none;
+                    font-weight: 600;
                     color: #404a5c;
                 }
             }
