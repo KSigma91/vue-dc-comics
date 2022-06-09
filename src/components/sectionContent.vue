@@ -1,5 +1,9 @@
 <template>
     <section id="content">
+        <div id="label">
+            <h4>CURRENT SERIES</h4>
+        </div>
+
         <div class="card-area">
             <myThumbnail v-for="(card, i) in thumbnails" :key="i" :details="card"/>
         </div>
@@ -107,9 +111,23 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        position: relative;
         width: 100%;
         height: calc(100vh - 368px);
         background: #1b1b1b;
+
+        #label {
+            position: absolute;
+            top: -26px;
+            left: 330px;
+            background: #1a75f2;
+            padding: 12px 32px;
+
+            h4 {
+                color: white;
+                font-size: 20px;
+            }
+        }
 
         .card-area {
             display: flex;
@@ -117,10 +135,9 @@
             flex-basis: 60%;
             flex-wrap: wrap;
             justify-content: space-around;
-            //align-items: center;
             width: 65%;
             height: 80%;
-            //background: lime;
+            text-align: left;
         }
 
         #learn-button {
@@ -129,7 +146,7 @@
 
             a {
                 text-decoration: none;
-                
+
                 h5 {
                     color: white;
                     font-size: 12px;

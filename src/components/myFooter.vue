@@ -171,29 +171,9 @@
                         <h4>FOLLOW US</h4>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/footer-facebook.png" alt="facebook_img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/footer-twitter.png" alt="twitter_img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/footer-youtube.png" alt="youtube_img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/footer-pinterest.png" alt="pinterest_img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../assets/footer-periscope.png" alt="periscope_img">
+                <li v-for="(social, i) in listSocial" :key="i">
+                    <a :href="social.url">
+                        <img :src="social.img" :alt="social.alt">
                     </a>
                 </li>
             </ul>
@@ -204,6 +184,37 @@
 <script>
     export default {
         name : 'myFooter',
+        data() {
+            return {
+                listSocial : [
+                    {
+                        img : require("../assets/footer-facebook.png"),
+                        alt : "facebook_img",
+                        url : "#",
+                    },
+                    {
+                        img : require("../assets/footer-twitter.png"),
+                        alt : "twitter_img",
+                        url : "#",
+                    },
+                    {
+                        img : require("../assets/footer-youtube.png"),
+                        alt : "youtube_img",
+                        url : "#",
+                    },
+                    {
+                        img : require("../assets/footer-pinterest.png"),
+                        alt : "pinterest_img",
+                        url : "#",
+                    },
+                    {
+                        img : require("../assets/footer-periscope.png"),
+                        alt : "periscope_img",
+                        url : "#"
+                    },
+                ]
+            }
+        }
     }
 </script>
 
@@ -215,7 +226,7 @@
 
         #footer-top {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             background: url(../assets/footer-bg.jpg);
             background-size: cover;        
             height: calc(100vh - 506px);
@@ -229,36 +240,36 @@
                 align-items: center;
                 max-width: 30%;
 
-                    .task-line {
-                        margin: 10px;
-                        max-height: 150px;
+                .task-line {
+                    margin: 10px;
+                    max-height: 50px;
                             
-                        ul {
-                            list-style-type: none;
+                    ul {
+                        list-style-type: none;
                             
-                            li {
-                                text-align: left;
-                                line-height: 25px;
+                        li {
+                            text-align: left;
+                            line-height: 22px;
 
-                                h3 {
-                                    color: white;
-                                }
+                            h3 {
+                                color: white;
+                            }
 
-                                a {
-                                    text-decoration: none;
-                                    color: #8c8c8c;
-                                    font-size: 13px;
-                                }
+                            a {
+                                text-decoration: none;
+                                color: #8c8c8c;
+                                font-size: 13px;
+                            }
 
-                                &:first-child {
-                                    margin-bottom: 10px;
-                                }
+                            &:first-child {
+                                 margin-bottom: 10px;
                             }
                         }
                     }
+                }
             } 
             img {
-                max-width: 600px;
+                max-width: 100%;
                 height: 500px;
             }  
         }
