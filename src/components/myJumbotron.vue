@@ -1,14 +1,12 @@
 <template>
     <section>
-        <a href="#">
-            <h1>Content goes here</h1>
-        </a>
+        <img src="../assets/jumbotron.jpg" alt="jumbotron_img">
     </section>
 </template>
 
 <script>
     export default {
-        name : 'calltoAction',
+        name : 'myJumbotron',
     }
 </script>
 
@@ -17,9 +15,13 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background: #1b1b1b;
-        width: 100%;
-        height: 130px;
+
+        img {
+            width: 100%;
+            height: 398px;
+            object-fit: cover;
+            object-position: top;
+        }
 
         a {
             text-decoration: none;

@@ -3,7 +3,7 @@
       <myHeader/>
 
     <section>
-      <calltoAction/>
+      <myJumbotron/>
     </section>
     
     <main>
@@ -18,7 +18,7 @@
 
 <script>
 import myHeader from './components/myHeader.vue'
-import calltoAction from './components/calltoAction.vue'
+import myJumbotron from './components/myJumbotron.vue'
 import myMain from './components/myMain'
 import myFooter from './components/myFooter'
 
@@ -26,7 +26,7 @@ export default {
   name: 'App',
   components: {
     myHeader,
-    calltoAction,
+    myJumbotron,
     myMain,
     myFooter
   }
