@@ -18,7 +18,7 @@
 
         img {
             width: 100%;
-            height: 398px;
+            height: 368px;
             object-fit: cover;
             object-position: top;
         }
