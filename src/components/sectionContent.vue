@@ -103,5 +103,15 @@
         width: 100%;
         height: calc(100vh - 368px);
         background: #1b1b1b;
+        .card-area {
+            display: flex;
+            flex-basis: 60%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 60%;
+            //height: 90%;
+        }
     }
 </style>
