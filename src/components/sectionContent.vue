@@ -3,6 +3,12 @@
         <div class="card-area">
             <myThumbnail v-for="(card, i) in thumbnails" :key="i" :details="card"/>
         </div>
+
+        <div id="learn-button">
+            <a href="#">
+                <h5>LOAD MORE</h5>
+            </a>
+        </div>
     </section>
 </template>
 
@@ -98,20 +104,38 @@
 <style scoped lang="scss">
     #content {
         display: flex;
-        // justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         height: calc(100vh - 368px);
         background: #1b1b1b;
+
         .card-area {
             display: flex;
+            gap: 5px;
             flex-basis: 60%;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center;
-            margin: 0 auto;
-            max-width: 60%;
-            //height: 90%;
+            //align-items: center;
+            width: 65%;
+            height: 80%;
+            //background: lime;
+        }
+
+        #learn-button {
+            background: #1a75f2;
+            padding: 11px 50px;
+
+            a {
+                text-decoration: none;
+                
+                h5 {
+                    color: white;
+                    font-size: 12px;
+                }
+            }
+           
         }
     }
 </style>
