@@ -98,7 +98,6 @@
     footer {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 423px);
         width: 100%;
 
         #footer-top {
@@ -106,8 +105,7 @@
             justify-content: space-around;
             background: url(../assets/footer-bg.jpg);
             background-size: cover;
-            width: 100%;
-            height: calc(100vh - 423px);
+            height: calc(100vh - 506px);
 
             .task-line {
                 display: flex;
@@ -127,7 +125,7 @@
                         a {
                             text-decoration: none;
                             color: #716b66;
-                            font-size: 15px;
+                            font-size: 13px;
                         }
                     }
                 }
@@ -135,7 +133,7 @@
 
             img {
                 max-width: 600px;
-                height: 600px;
+                height: 500px;
             }
         }   
         
@@ -144,8 +142,7 @@
             justify-content: space-around;
             align-items: center;
             background: #2c2c2c;
-            width: 100%;
-            height: 104px;
+            height: 107px;
 
             #sign-up {
                 text-decoration: none;
@@ -160,7 +157,7 @@
                 list-style-type: none;
 
                 li {
-                    padding: 8px;
+                    padding: 9px;
 
                     h4 {
                         color: #1875dd;

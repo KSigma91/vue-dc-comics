@@ -45,25 +45,25 @@
                         url : "#",
                         img : require("../assets/buy-comics-digital-comics.png"),
                         alt : "comics_digital_img",
-                        text : "DIGITAL COMICS",
+                        text : "DIGITAL COMICS"
                     },
                     {
                         url : "#",
                         img : require("../assets/buy-comics-merchandise.png"),
                         alt : "comics_merchandise_img",
-                        text : "DC MERCHANDISE",
+                        text : "DC MERCHANDISE"
                     },
                     {
                         url : "#",
                         img : require("../assets/buy-comics-subscriptions.png"),
                         alt : "comics_subscriptions_img",
-                        text : "SUBSCRIPTION",
+                        text : "SUBSCRIPTION"
                     },
                     {
                         url : "#",
                         img : require("../assets/buy-comics-shop-locator.png"),
                         alt : "comics_shop_locator_img",
-                        text : "COMIC SHOP LOCATOR",
+                        text : "COMIC SHOP LOCATOR"
                     },
                     {
                         url : "#",

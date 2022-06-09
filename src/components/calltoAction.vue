@@ -17,7 +17,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background: #101010;
+        background: #1b1b1b;
         width: 100%;
         height: 130px;
 

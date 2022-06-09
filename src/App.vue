@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <myHeader/>
-    <calltoAction/>
-    <myMain/>
-    <myFooter/>
+      <myHeader/>
+
+    <section>
+      <calltoAction/>
+    </section>
+    
+    <main>
+      <myMain/>
+    </main>
+
+    <footer>
+      <myFooter/>
+    </footer>
   </div>
 </template>
 
@@ -25,6 +34,12 @@ export default {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,5 +47,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin: 0 auto;
 }
 </style>

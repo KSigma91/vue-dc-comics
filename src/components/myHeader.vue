@@ -125,14 +125,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        height: 140px;
-        // debug
-        background: grey;
+        margin: 0 auto;
+        width: 80%;
+        height: 116px;
 
         img {
-            max-width: 100%;
-            height: 90px;
+            max-width: 78px;
         }
 
         ul {
@@ -142,17 +140,17 @@
 
             li {
                 padding: 60px 20px;
-
-                
-
+            
                 a {
                     text-decoration: none;
+                    font-size: 12px;
                     font-weight: 600;
                     color: #404a5c;
 
                     &:hover {
-                        padding-bottom: 57px;
+                        padding-bottom: 45px;
                         border-bottom: 5px solid #1A75F2;
+                        color: #1A75F2;
                     }
                 }
             }
