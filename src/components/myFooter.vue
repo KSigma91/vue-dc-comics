@@ -156,7 +156,6 @@
                     </ul>
                 </div>
             </div>
-
             <img src="../assets/dc-logo-bg.png" alt="dc_logo_bg_img">
         </div>
 
@@ -164,7 +163,6 @@
             <a id="sign-up" href="#">
                 <span>SIGN-UP NOW!</span>
             </a>
-
             <ul>
                 <li>
                     <a href="#">
@@ -229,7 +227,7 @@
             justify-content: space-evenly;
             background: url(../assets/footer-bg.jpg);
             background-size: cover;        
-            height: calc(100vh - 506px);
+            height: 50vh;
 
             .col {
                 display: flex;
@@ -270,7 +268,7 @@
             } 
             img {
                 max-width: 100%;
-                height: 500px;
+                height: 400px;
             }  
         }
         
@@ -279,7 +277,7 @@
             justify-content: space-around;
             align-items: center;
             background: #2c2c2c;
-            height: 107px;
+            height: 100px;
 
             #sign-up {
                 text-decoration: none;

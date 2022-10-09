@@ -16,20 +16,23 @@
 
 <style scoped lang="scss">
     .card {
-        width: 183px;
-        height: 180px;
-        margin: 20px 3px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
 
         img {
-            width: 100%;
-            max-height: 180px;
+            width: 118px;
+            height: 120px;
             object-fit: cover;
             object-position: top;
         }
 
         span {
+            width: 130px;
             color: white;
-            font-size: 12px;
+            font-size: .6em;
             text-align: left;
         }
     }
