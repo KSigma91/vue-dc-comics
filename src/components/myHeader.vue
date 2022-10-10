@@ -1,15 +1,23 @@
 <template>
     <header>
-        <img src="../assets/dc-logo.png" alt="dc_logo_img">
-        <nav>
-            <ul>
-                <li v-for="(link, i) in links" :key="i">
-                    <a :href="link.url" :class="link.current ? 'click' : ''">
-                        {{ link.text }}                      
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="top-header">
+            <small>DC POWER<sup>sm</sup> VISA&reg;</small>
+            <a href="#">
+                ADDITIONAL DC SITES
+            </a>
+        </div>
+        <div class="navbar">
+            <img src="../assets/dc-logo.png" alt="dc_logo_img">
+            <nav>
+                <ul>
+                    <li v-for="(link, i) in links" :key="i">
+                        <a :href="link.url" :class="link.current ? 'click' : ''">
+                            {{ link.text }}                      
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 </template>
 
@@ -77,35 +85,54 @@
 
 <style scoped lang="scss">
     header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        width: 80%;
-        height: 116px;
-
-        img {
-            max-width: 78px;
+        .top-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: baseline;
+            gap: 50px;
+            background: blue;
+            height: 17px;
+            color: #fff;
+            font-size: .6em;
+            
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: .8em;
+            }
         }
 
-        ul {
+        .navbar {
             display: flex;
-            justify-content: space-evenly;
-            list-style-type: none;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+            height: 80px;
 
-            li {
-                padding: 60px 20px;
-            
-                a {
-                    text-decoration: none;
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: #404a5c;
+            img {
+                width: 57px;
+            }
 
-                    &:hover {
-                        padding-bottom: 45px;
-                        border-bottom: 5px solid #1A75F2;
-                        color: #1A75F2;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                list-style-type: none;
+
+                li {
+                    padding: 60px 20px;
+                
+                    a {
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #404a5c;
+
+                        &:hover {
+                            padding-bottom: 45px;
+                            border-bottom: 5px solid #1A75F2;
+                            color: #1A75F2;
+                        }
                     }
                 }
             }
