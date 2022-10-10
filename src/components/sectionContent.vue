@@ -132,7 +132,7 @@
         .card-area {
             display: flex;
             gap: 5px;
-            flex-basis: 60%;
+            flex-basis: calc(100% / 6);
             flex-wrap: wrap;
             justify-content: space-around;
             width: 65%;

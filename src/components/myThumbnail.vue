@@ -22,7 +22,7 @@
 
         img {
             width: 100%;
-            max-height: 180px;
+            height: 180px;
             object-fit: cover;
             object-position: top;
         }
