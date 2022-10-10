@@ -1,9 +1,12 @@
 <template>
     <header>
         <div class="top-header">
-            <small>DC POWER<sup>sm</sup> VISA&reg;</small>
+            <a href="#">
+                DC POWER<sup>sm</sup> VISA&reg;
+            </a>
             <a href="#">
                 ADDITIONAL DC SITES
+                <i class="fas fa-caret-down"></i>
             </a>
         </div>
         <div class="navbar">
@@ -12,11 +15,21 @@
                 <ul>
                     <li v-for="(link, i) in links" :key="i">
                         <a :href="link.url" :class="link.current ? 'click' : ''">
-                            {{ link.text }}                      
+                            {{ link.text }}                     
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            SHOP
+                            <i class="fas fa-caret-down"></i>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <div>
+                <input type="search" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
     </header>
 </template>
@@ -71,12 +84,7 @@
                         text : "NEWS",
                         url : "#",
                         current : false
-                    },
-                    {
-                        text : "SHOP",
-                        url : "#",
-                        current : false
-                    },
+                    }
                 ]
             }
         }
@@ -88,30 +96,31 @@
         .top-header {
             display: flex;
             justify-content: flex-end;
-            align-items: baseline;
-            gap: 50px;
-            background: blue;
-            height: 17px;
-            color: #fff;
-            font-size: .6em;
+            align-items: center;
+            gap: 54px;
+            padding-right: 375px;
+            background: #0282f9;
+            height: 23px;
             
             a {
+                font-family: Arial;
                 text-decoration: none;
                 color: #fff;
-                font-size: .8em;
+                font-size: .6em;
             }
         }
 
         .navbar {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             margin: 0 auto;
+            padding: 0 100px;
             width: 80%;
-            height: 80px;
+            height: 86px;
 
             img {
-                width: 57px;
+                width: 60px;
             }
 
             ul {
@@ -124,16 +133,30 @@
                 
                     a {
                         text-decoration: none;
-                        font-size: 12px;
-                        font-weight: 600;
+                        font-size: 1em;
+                        font-weight: 500;
                         color: #404a5c;
 
                         &:hover {
-                            padding-bottom: 45px;
+                            padding-bottom: 27px;
                             border-bottom: 5px solid #1A75F2;
                             color: #1A75F2;
                         }
                     }
+                }
+            }
+
+            div {
+                border-bottom: 2px solid #1A75F2;
+
+                input {
+                    width: 110px;
+                    font-family: Teko;
+                    font-size: 1em;
+                    font-weight: 500;
+                    text-align: right;
+                    outline: 0;
+                    border: 0;
                 }
             }
         }

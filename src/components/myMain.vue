@@ -7,89 +7,66 @@
                     <span>{{ icon.text }}</span>
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    <img src="../assets/buy-comics-merchandise.png" alt="comics_merchandise_img">
-                    <span>DC MERCHANDISE</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/buy-comics-subscriptions.png" alt="comics_subscriptions_img">
-                    <span>SUBSCRIPTION</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/buy-comics-shop-locator.png" alt="comics_shop_img">
-                    <span>COMIC SHOP LOCATOR</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/buy-dc-power-visa.svg" alt="power_visa_img">
-                    <span>DC POWER VISA</span>
-                </a>
-            </li> -->
         </ul>
     </main>
 </template>
 
 <script>
-    export default {
-        name : 'myMain',
-        data() {
-            return {
-                icons : [
-                    {
-                        url : "#",
-                        img : require("../assets/buy-comics-digital-comics.png"),
-                        alt : "comics_digital_img",
-                        text : "DIGITAL COMICS"
-                    },
-                    {
-                        url : "#",
-                        img : require("../assets/buy-comics-merchandise.png"),
-                        alt : "comics_merchandise_img",
-                        text : "DC MERCHANDISE"
-                    },
-                    {
-                        url : "#",
-                        img : require("../assets/buy-comics-subscriptions.png"),
-                        alt : "comics_subscriptions_img",
-                        text : "SUBSCRIPTION"
-                    },
-                    {
-                        url : "#",
-                        img : require("../assets/buy-comics-shop-locator.png"),
-                        alt : "comics_shop_locator_img",
-                        text : "COMIC SHOP LOCATOR"
-                    },
-                    {
-                        url : "#",
-                        img : require("../assets/buy-dc-power-visa.svg"),
-                        alt : "power_visa_img",
-                        text : "DC POWER VISA"
-                    },
-                ]
-            }
+export default {
+    name : 'myMain',
+    data() {
+        return {
+            icons : [
+                {
+                    url : "#",
+                    img : require("../assets/buy-comics-digital-comics.png"),
+                    alt : "comics_digital_img",
+                    text : "DIGITAL COMICS"
+                },
+                {
+                    url : "#",
+                    img : require("../assets/buy-comics-merchandise.png"),
+                    alt : "comics_merchandise_img",
+                    text : "DC MERCHANDISE"
+                },
+                {
+                    url : "#",
+                    img : require("../assets/buy-comics-subscriptions.png"),
+                    alt : "comics_subscriptions_img",
+                    text : "SUBSCRIPTION"
+                },
+                {
+                    url : "#",
+                    img : require("../assets/buy-comics-shop-locator.png"),
+                    alt : "comics_shop_locator_img",
+                    text : "COMIC SHOP LOCATOR"
+                },
+                {
+                    url : "#",
+                    img : require("../assets/buy-dc-power-visa.svg"),
+                    alt : "power_visa_img",
+                    text : "DC POWER VISA"
+                },
+            ]
         }
     }
+}
 </script>
 
 <style scoped lang="scss">
     main {
         display: flex;
-        width: 100%;
-        height: 153px;
+        // width: 100%;
+        height: 135px;
         background: #1a75f2;
-
+        
         ul {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0 auto;
-            // width: 80%;
+            justify-content: center;
+            gap: 15px;
+            // align-items: center;
+            // margin: 0 auto;
+            width: 100%;
 
             li {
                 display: flex;
@@ -104,9 +81,10 @@
                     color: white;
                         
                     img {
-                        max-width: 100%;
-                        height: 55px; 
-                        margin: 0 10px;
+                        object-fit: contain;
+                        width: 43px;
+                        height: 54px; 
+                        margin-right: 10px;
                     }
 
                     span {

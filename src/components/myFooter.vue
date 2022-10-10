@@ -1,11 +1,21 @@
 <template>
     <footer>
         <div id="footer-top">
+            <ul>
+                <li v-for="(icon, i) in icons" :key="i">
+                    <a :href="icon.url">
+                        <img :src="icon.img" :alt="icon.alt">
+                        <span>{{ icon.text }}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer-mid">
             <div class="col">
                 <div class="task-line">
                     <ul>
                         <li>
-                            <h3>DC COMICS</h3>
+                            <h2>DC COMICS</h2>
                         </li>
                         <li>
                             <a href="#">
@@ -43,11 +53,26 @@
                             </a>
                         </li>
                     </ul>
+                    <ul>
+                        <li>
+                            <h2>SHOP</h2>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Shop DC
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Shop DC Collectibles
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="task-line">
                     <ul>
                         <li>
-                            <h3>DC</h3>
+                            <h2>DC</h2>
                         </li>
                         <li>
                             <a href="#">
@@ -109,7 +134,7 @@
                 <div class="task-line">
                     <ul>
                         <li>
-                            <h3>SITES</h3>
+                            <h2>SITES</h2>
                         </li>
                         <li>
                             <a href="#">
@@ -139,21 +164,9 @@
                     </ul>
                 </div>
                 <div class="task-line">
-                    <ul>
-                        <li>
-                            <h3>SHOP</h3>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Shop DC
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Shop DC Collectibles
-                            </a>
-                        </li>
-                    </ul>
+                    <p>
+                        All Site Content TM and &copy; 2020 DC Entertainment, unless otherwise <span>noted here</span>. All rights reserved. <span>Cookies Settings</span>
+                    </p>
                 </div>
             </div>
             <img src="../assets/dc-logo-bg.png" alt="dc_logo_bg_img">
@@ -161,12 +174,12 @@
 
         <div id="footer-bottom">
             <a id="sign-up" href="#">
-                <span>SIGN-UP NOW!</span>
+                SIGN-UP NOW!
             </a>
             <ul>
                 <li>
                     <a href="#">
-                        <h4>FOLLOW US</h4>
+                        <h2>FOLLOW US</h2>
                     </a>
                 </li>
                 <li v-for="(social, i) in listSocial" :key="i">
@@ -184,6 +197,38 @@
         name : 'myFooter',
         data() {
             return {
+                icons : [
+                    {
+                        url : "#",
+                        img : require("../assets/buy-comics-digital-comics.png"),
+                        alt : "comics_digital_img",
+                        text : "DIGITAL COMICS"
+                    },
+                    {
+                        url : "#",
+                        img : require("../assets/buy-comics-merchandise.png"),
+                        alt : "comics_merchandise_img",
+                        text : "DC MERCHANDISE"
+                    },
+                    {
+                        url : "#",
+                        img : require("../assets/buy-comics-subscriptions.png"),
+                        alt : "comics_subscriptions_img",
+                        text : "SUBSCRIPTION"
+                    },
+                    {
+                        url : "#",
+                        img : require("../assets/buy-comics-shop-locator.png"),
+                        alt : "comics_shop_locator_img",
+                        text : "COMIC SHOP LOCATOR"
+                    },
+                    {
+                        url : "#",
+                        img : require("../assets/buy-dc-power-visa.svg"),
+                        alt : "power_visa_img",
+                        text : "DC POWER VISA"
+                    },
+                ],
                 listSocial : [
                     {
                         img : require("../assets/footer-facebook.png"),
@@ -224,39 +269,82 @@
 
         #footer-top {
             display: flex;
-            justify-content: space-evenly;
+            height: 135px;
+            background: #1a75f2;
+            z-index: 300;
+
+                ul {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    justify-content: space-around;
+                    list-style-type: none;
+                    padding: 30px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-family: Helvetica;
+                        color: white;
+                            
+                        img {
+                            object-fit: contain;
+                            width: 43px;
+                            height: 54px; 
+                            margin-right: 10px;
+                        }
+
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer-mid {
+            position: relative;
+            display: flex;
             background: url(../assets/footer-bg.jpg);
             background-size: cover;        
-            height: 50vh;
+            height: 42vh;
 
             .col {
                 display: flex;
-                gap: 30px;
-                flex-basis: 23%;
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 align-items: center;
+                // gap: 30px;
+                margin-left: 320px;
                 max-width: 30%;
 
                 .task-line {
                     margin: 10px;
-                    max-height: 50px;
+                    max-height: 140px;
                             
                     ul {
                         list-style-type: none;
+                        margin-bottom: 25px;
                             
                         li {
                             text-align: left;
-                            line-height: 22px;
 
-                            h3 {
+                            h2 {
+                                font-weight: 500;
                                 color: white;
                             }
 
                             a {
+                                line-height: 10px;
+                                font-family: Helvetica;
                                 text-decoration: none;
                                 color: #8c8c8c;
-                                font-size: 13px;
+                                font-size: .7em;
                             }
 
                             &:first-child {
@@ -264,11 +352,27 @@
                             }
                         }
                     }
+
+                    p {
+                        margin-top: 80px;
+                        padding-right: 30px;
+                        text-align: left;
+                        color: #8c8c8c;
+                        font-size: .7em;
+
+                        span {
+                            color: #0282f9;
+                        }
+                    }
                 }
             } 
             img {
+                position: absolute;
+                top: -15%;
+                right: 18%;
+                z-index: 100;
                 max-width: 100%;
-                height: 400px;
+                height: 537px;
             }  
         }
         
@@ -276,12 +380,15 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            z-index: 300;
             background: #2c2c2c;
             height: 100px;
 
             #sign-up {
-                text-decoration: none;
                 padding: 12px 15px;
+                font-family: Helvetica;
+                font-size: .8em;
+                text-decoration: none;
                 border: 2px solid #1a6dda;
                 color: white;
             }
@@ -294,7 +401,8 @@
                 li {
                     padding: 9px;
 
-                    h4 {
+                    h2 {
+                        font-weight: 500;
                         color: #1875dd;
                     }
 

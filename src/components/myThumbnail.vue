@@ -20,19 +20,20 @@
         flex-wrap: wrap;
         flex-direction: column;
         gap: 15px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
         img {
-            width: 118px;
-            height: 120px;
+            width: 176px;
+            height: 178px;
             object-fit: cover;
             object-position: top;
         }
 
         span {
-            width: 130px;
+            width: 160px;
+            line-height: 1.2em;
             color: white;
-            font-size: .6em;
+            font-size: .7em;
             text-align: left;
         }
     }

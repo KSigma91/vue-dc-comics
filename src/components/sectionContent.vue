@@ -1,7 +1,7 @@
 <template>
     <section id="content">
         <div id="label">
-            <h4>CURRENT SERIES</h4>
+            <big>CURRENT SERIES</big>
         </div>
         <div class="card-area">
             <myThumbnail v-for="(card, i) in thumbnails" :key="i" :details="card"/>
@@ -112,26 +112,29 @@
         align-items: center;
         padding-top: 38px;
         width: 100%;
-        height: 78vh;
+        height: 62vh;
         background: #1b1b1b;
 
         #label {
             position: absolute;
-            top: -26px;
-            left: 218px;
+            top: -22px;
+            left: 330px;
             background: #1a75f2;
-            padding: 12px 20px;
+            padding: 1px 23px;
 
-            h4 {
+            big {
+                font-family: Teko;
+                font-size: 1.9em;
+                font-weight: 500;
                 color: white;
             }
         }
 
         .card-area {
             display: flex;
-            gap: 6px;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 25px;
             width: 70%;
             text-align: left;
         }
@@ -141,11 +144,11 @@
 
             a {
                 background: #1a75f2;
-                padding: 8px 30px;
+                padding: 6px 52px;
                 text-decoration: none;
                 color: white;
-                font-size: .6em;
-                font-weight: bold;
+                font-size: .9em;
+                font-weight: 500;
             }
         }
     }

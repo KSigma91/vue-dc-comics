@@ -6,12 +6,8 @@
       <myJumbotron/>
     </section>
 
-    <section>
-      <sectionContent/>
-    </section>
-    
     <main>
-      <myMain/>
+      <sectionContent/>
     </main>
 
     <footer>
@@ -23,8 +19,7 @@
 <script>
 import myHeader from './components/myHeader.vue'
 import myJumbotron from './components/myJumbotron.vue'
-import myMain from './components/myMain'
-import myFooter from './components/myFooter'
+import myFooter from './components/myFooter.vue'
 import sectionContent from './components/sectionContent.vue'
 
 export default {
@@ -32,7 +27,6 @@ export default {
   components: {
     myHeader,
     myJumbotron,
-    myMain,
     myFooter,
     sectionContent
 }
@@ -40,6 +34,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,5 +50,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   margin: 0 auto;
+}
+
+a, h2, h3 {
+  font-family: Teko;
 }
 </style>
